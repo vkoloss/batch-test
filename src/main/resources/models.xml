@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<models>
+    <model name="model1" price="1" />
+    <model name="model2" />
+    <model name="model3" price="3" />
+    <model name="model4" price="4" />
+    <model name="model5" price="5" />
+    <model name="model6" price="6" />
+    <model name="model7" price="7" />
+    <model name="model8" price="8" />
+</models>
