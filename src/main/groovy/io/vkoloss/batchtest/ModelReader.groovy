@@ -22,8 +22,17 @@ class ModelReader implements ItemReader<Model> {
 
     @Override
     Model read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-        def attributes = iterator.next().attributes
-        iterator.hasNext() ? new Model(name: attributes.name, price: attributes.price?.toLong()) : null
+        if (!iterator.hasNext()) {
+            return null
+        }
+        Map attr = iterator.next().attributes
+        println "reading $attr"
+        ['name', 'price'].each {
+            if (attr[it] == null) {
+                throw new IllegalArgumentException("Value of $it can not be null")
+            }
+        }
+        new Model(name: attr.name, price: new BigDecimal(attr.price))
     }
 
 }

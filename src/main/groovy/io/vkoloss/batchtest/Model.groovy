@@ -2,5 +2,10 @@ package io.vkoloss.batchtest
 
 class Model {
     String name
-    Long price
+    BigDecimal price
+
+    @Override
+    public String toString() {
+        "Model{name='$name', price=$price}"
+    }
 }
