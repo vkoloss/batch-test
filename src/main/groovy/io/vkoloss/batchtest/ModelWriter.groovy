@@ -13,7 +13,10 @@ class ModelWriter implements ItemWriter<Model> {
 
     @Override
     void write(List<? extends Model> items) throws Exception {
-        println "writing " + items.size() + " elements"
+        println "writing " + items.size() + " elements in batch"
+        items.each {
+            println "writing $it"
+        }
         jdbcTemplate.batchUpdate("insert into model values (nextval('model_seq'), ?, ?)", items.collect {
             [it.name, it.price] as Object[]
         })

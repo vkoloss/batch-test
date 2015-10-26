@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component
 class ModelProcessor implements ItemProcessor<Model, Model> {
     @Override
     Model process(Model item) throws Exception {
-        return item
+        println "processing $item"
+        item
     }
 }
