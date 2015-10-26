@@ -2,7 +2,7 @@ package io.vkoloss.batchtest
 
 import org.springframework.batch.core.listener.ItemListenerSupport
 
-class ModelListener extends ItemListenerSupport {
+class ModelListener extends ItemListenerSupport<Model, Model> {
 
     @Override
     public void onReadError(Exception ex) {
@@ -10,7 +10,7 @@ class ModelListener extends ItemListenerSupport {
     }
 
     @Override
-    public void onWriteError(Exception ex, List<?> item) {
+    public void onWriteError(Exception ex, List<? extends Model> item) {
         println "Encountered error on write $item due to $ex"
     }
 }
