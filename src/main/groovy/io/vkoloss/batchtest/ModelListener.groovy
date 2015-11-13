@@ -1,7 +1,9 @@
 package io.vkoloss.batchtest
 
 import org.springframework.batch.core.listener.ItemListenerSupport
+import org.springframework.stereotype.Component
 
+@Component("listener")
 class ModelListener extends ItemListenerSupport<Model, Model> {
 
     @Override

@@ -27,11 +27,11 @@ class ModelReader implements ItemReader<Model> {
         }
         Map attr = iterator.next().attributes
         println "reading $attr"
-        ['name', 'price'].each {
-            if (attr[it] == null) {
-                throw new IllegalArgumentException("Value of $it can not be null")
-            }
-        }
+//        ['name', 'price'].each {
+//            if (attr[it] == null) {
+//                throw new IllegalArgumentException("Value of $it can not be null")
+//            }
+//        }
         new Model(name: attr.name, price: new BigDecimal(attr.price))
     }
 

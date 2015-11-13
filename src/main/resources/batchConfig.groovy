@@ -13,7 +13,7 @@ beans {
 
     dataSource(DriverManagerDataSource) {
         driverClassName = "org.postgresql.Driver"
-        url = "jdbc:postgresql://localhost:5432/test"
+        url = "jdbc:postgresql://localhost:5432/batch-test"
         username = "postgres"
         password = "postgres"
     }
@@ -41,8 +41,8 @@ beans {
                     reader: 'modelReader',
                     writer: 'modelWriter',
                     processor: 'modelProcessor',
-                    'commit-interval': 2,
-                    'skip-limit': 3
+                    'commit-interval': 1,
+                    'skip-limit': 100000
                 ) {
                     batch.'skippable-exception-classes' {
                         batch.include(

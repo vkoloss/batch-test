@@ -10,7 +10,7 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.5'
     compile 'postgresql:postgresql:9.0-801.jdbc3'
-    compile 'org.springframework:spring-context-support:4.2.2.RELEASE'
+    compile 'org.springframework:spring-context:4.2.2.RELEASE'
     compile "org.springframework:spring-orm:4.2.2.RELEASE"
     compile 'org.springframework.batch:spring-batch-core:3.0.5.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.11'

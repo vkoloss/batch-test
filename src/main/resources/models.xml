@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
     <model name="model1" price="1" />
-    <model name="model2" />
+    <model price="2" />
     <model name="model3" price="3" />
     <model name="model4" price="4" />
     <model name="model5" price="5" />
